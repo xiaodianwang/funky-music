@@ -33,7 +33,7 @@
 // Define a function to query our API
 function getMusic(offset) {
     console.log("Getting another set of results from " + offset);
-    $.post('http://localhost:8080/api/music', {'offset': offset}, function(data) {
+    $.post('https://rocky-garden-1740.herokuapp.com/api/music', {'offset': offset}, function(data) {
         // data is a list of playlist JSON items, so we need to iterate
         console.log(data);
         $.each(data.playlists, function(index, playlist) {
